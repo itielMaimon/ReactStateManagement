@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+ul {
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus,
+input:focus {
+  outline: none;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  text-align: center;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+
+  // TodoAdd
+  form {
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+
+    input {
+      background: #ffffff61;
+      border: 1px solid rgb(0, 0, 0);
+      height: 35px;
+      width: 75%;
+      border-radius: 2em 0 0 2em;
+      padding: 0.5em 1em;
+    }
+
+    button {
+      border: 1px solid rgb(0, 0, 0);
+      border-radius: 0 2em 2em 0;
+      height: 35px;
+      width: 25%;
+      padding: 0.5em 1em;
+    }
+  }
+
+  // TodoItem
+  li {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    padding: 1em;
+    cursor: pointer;
+
+    &:hover {
+      background: #3498db;
+    }
+
+    span {
+      flex: 1;
+      text-align: start;
+    }
+
+    button {
+      color: #e74c3c;
+      border-radius: 1em;
+      padding: 0.5em 1em;
+      margin-left: 1em;
+      border: none;
+      cursor: pointer;
+    }
+
+    input {
+      background: #ffffff61;
+      border: 1px solid rgb(0, 0, 0);
+      height: 25px;
+      width: 100px;
+      border-radius: 2em;
+      padding: 0.5em 1em;
+    }
+  }
+
+  // Active item panel
+  .active-item {
+    background-color: #c6d1ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 5em;
+    border-radius: 1em;
+  }
+
+  .todosCount {
+    color: #7434db;
+  }
+}
