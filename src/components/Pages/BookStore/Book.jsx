@@ -1,6 +1,6 @@
 import React from "react";
 
-const Book = ({ name, price, addCart, index }) => {
+const Book = ({ name, price, addToCart, index }) => {
   return (
     <div className="ui card item">
       <img
@@ -10,7 +10,7 @@ const Book = ({ name, price, addCart, index }) => {
       ></img>
       <h1>{name}</h1>
       <h3>{price}$</h3>
-      <button onClick={() => addCart(index)}>Add to cart</button>
+      <button onClick={() => addToCart(index)}>Add to cart</button>
     </div>
   );
 };

@@ -16,7 +16,7 @@ const BookList = () => {
           key={index}
           name={book.name}
           price={book.price}
-          addCart={() => {}}
+          addToCart={() => {}}
           index={index}
         />
       ))}

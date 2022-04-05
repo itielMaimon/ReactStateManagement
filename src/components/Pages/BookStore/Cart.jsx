@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Cart = () => {
   const [cart, setCart] = useState([]);
 
-  const addCart = (index) => {
+  const addToCart = (index) => {
     // setCart((prevCart) => [...prevCart, books[index]]);
     // setBudget((prevBudget) => prevBudget - books[index].price);
   };
