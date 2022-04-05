@@ -1,7 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Book from "./Book";
 
-const BookList = ({ books, addCart }) => {
+const BookList = () => {
+  const [books] = useState([
+    { name: "Harry Potter", price: 10 },
+    { name: "Game of Thrones", price: 15 },
+    { name: "War and Peace", price: 20 },
+    { name: "Hamlet", price: 23 },
+  ]);
+
   return (
     <div className="ui horizontal list">
       {books.map((book, index) => (
@@ -9,7 +16,7 @@ const BookList = ({ books, addCart }) => {
           key={index}
           name={book.name}
           price={book.price}
-          addCart={addCart}
+          addCart={() => {}}
           index={index}
         />
       ))}

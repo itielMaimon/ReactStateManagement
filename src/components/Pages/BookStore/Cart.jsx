@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Cart = ({ cart }) => {
+const Cart = () => {
+  const [cart, setCart] = useState([]);
+
+  const addCart = (index) => {
+    // setCart((prevCart) => [...prevCart, books[index]]);
+    // setBudget((prevBudget) => prevBudget - books[index].price);
+  };
+
   return (
     <div
       style={{
