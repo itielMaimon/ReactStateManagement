@@ -1,12 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
+import { useRecoilValue } from "recoil";
+import { cartState } from "./atoms";
 
 const Cart = () => {
-  const [cart, setCart] = useState([]);
-
-  const addToCart = (index) => {
-    // setCart((prevCart) => [...prevCart, books[index]]);
-    // setBudget((prevBudget) => prevBudget - books[index].price);
-  };
+  const cart = useRecoilValue(cartState);
 
   return (
     <div

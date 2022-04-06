@@ -9,28 +9,28 @@ function PropDrilling() {
         Click me
       </button>
       <h2>You clicked: {count} times</h2>
-      {/* <A count={count} /> */}
+      <A count={count} setCount={setCount} />
     </div>
   );
 }
 
-function A({ count }) {
+function A({ count, setCount }) {
   return (
     <div style={{ border: "1px solid green", padding: "30px" }}>
       A Component
       <h4>AAA</h4>
-      {/* <B count={count} /> */}
+      <B count={count} setCount={setCount} />
     </div>
   );
 }
 
-function B({ count }) {
+function B({ count, setCount }) {
   return (
     <div style={{ border: "1px solid blue", padding: "30px" }}>
       B Component
       <h4>BBB</h4>
-      {/* <C count={count} /> */}
-      {/* <D count={count} /> */}
+      <C count={count} />
+      <D setCount={setCount} />
     </div>
   );
 }
@@ -45,13 +45,12 @@ function C({ count }) {
   );
 }
 
-function D({ count }) {
+function D({ setCount }) {
   return (
     <div style={{ border: "1px solid orange", padding: "30px" }}>
       D Component
       <h4>DDD</h4>
-      <button className="ui button">
-        {/* onClick={() => setCount(0)}> */}
+      <button className="ui button" onClick={() => setCount(0)}>
         Reset Count
       </button>
     </div>

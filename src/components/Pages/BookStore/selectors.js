@@ -1,7 +1,7 @@
 import { selector } from "recoil";
 import { budgetState, cartState } from "./atoms";
 
-export const addToCart = selector({
+export const addToCartState = selector({
   key: "addToCartState",
   get: ({ get }) => {},
   set: ({ set, get }, book) => {

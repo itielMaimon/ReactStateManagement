@@ -9,3 +9,13 @@ export const booksState = atom({
     { name: "Hamlet", price: 23 },
   ],
 });
+
+export const cartState = atom({
+  key: "cartState",
+  default: [],
+});
+
+export const budgetState = atom({
+  key: "budgetState",
+  default: 100,
+});
