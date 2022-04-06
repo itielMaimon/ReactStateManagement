@@ -1,17 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Book from "./Book";
+import { useBooks } from "./hooks/useBooks";
 
-const BookList = ({ books, addCart }) => {
+const BookList = () => {
+  const { books } = useBooks();
+
   return (
     <div className="ui horizontal list">
-      {books.map((book, index) => (
-        <Book
-          key={index}
-          name={book.name}
-          price={book.price}
-          addCart={addCart}
-          index={index}
-        />
+      {books.map((_book, index) => (
+        <Book key={index} index={index} />
       ))}
     </div>
   );

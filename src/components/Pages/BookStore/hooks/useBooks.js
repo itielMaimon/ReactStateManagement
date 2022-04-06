@@ -1,12 +1,11 @@
-import { useRecoilValueLoadable } from "recoil";
-import { booksSate } from "../../recoil/atoms";
+import { useRecoilState } from "recoil";
+import { booksState } from "../atoms";
 
 export function useBooks() {
-  const books = useRecoilValueLoadable(booksSate);
+  const [books, setBooks] = useRecoilState(booksState);
 
   return {
-    books: books.contents,
-    isLoading: books.state === "loading",
-    hasError: books.state === "hasError",
+    books,
+    setBooks,
   };
 }

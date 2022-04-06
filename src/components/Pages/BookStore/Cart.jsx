@@ -1,6 +1,10 @@
 import React from "react";
+import { useRecoilValue } from "recoil";
+import { cartState } from "./atoms";
 
-const Cart = ({ cart }) => {
+const Cart = () => {
+  const cart = useRecoilValue(cartState);
+
   return (
     <div
       style={{

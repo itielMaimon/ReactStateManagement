@@ -1,6 +1,14 @@
 import React from "react";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import { booksState } from "./atoms";
+import { addToCartState } from "./selectors";
 
-const Book = ({ name, price, addCart, index }) => {
+const Book = ({ index }) => {
+  const books = useRecoilValue(booksState);
+  const addToCart = useSetRecoilState(addToCartState);
+
+  const book = books[index];
+
   return (
     <div className="ui card item">
       <img
@@ -8,9 +16,9 @@ const Book = ({ name, price, addCart, index }) => {
         src="https://images.unsplash.com/photo-1519764340700-3db40311f21e?fit=crop&w=280&q=200"
         alt=""
       ></img>
-      <h1>{name}</h1>
-      <h3>{price}$</h3>
-      <button onClick={() => addCart(index)}>Add to cart</button>
+      <h1>{book.name}</h1>
+      <h3>{book.price}$</h3>
+      <button onClick={() => addToCart(book)}>Add to cart</button>
     </div>
   );
 };
